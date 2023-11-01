@@ -174,7 +174,7 @@ if x == "y":
             new_text = input("Введите новый текст заметки:\n")
             note["text"] = new_text                
             dt = datetime.datetime.now()
-            note["date_changed"] = "{0}.{1}.{2}".format(dt.day,dt.month,dt.year)
+            note["change_date"] = "{0}.{1}.{2}".format(dt.day,dt.month,dt.year)
             note["header"] = " ".join(new_text.split(" ")[:5])
             app.notes.edit(num,note)
             print("Заметка отредактирована")
